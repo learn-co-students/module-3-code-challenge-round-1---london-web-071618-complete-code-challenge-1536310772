@@ -37,7 +37,7 @@ class Image {
   }
 
   handleLike() {
-    this.likeButton.addEventListener('click', () => {
+    this.likeButton.addEventListener('submit', () => {
       this.likeCount ++
       this.showLikes.innerText = this.likeCount
       fetch('https://randopic.herokuapp.com/likes', {
@@ -56,6 +56,9 @@ class Image {
 
   handleNewComment() {
     this.commentForm.addEventListener('submit', (e) => {
+      // const newComment = document.createElement('li')
+      // newComment.innerText = this.commentInput.value
+      // this.commentForm.appendChild(newComment)
       fetch('https://randopic.herokuapp.com/comments', {
         headers: {
           'Accept': 'application/json',
