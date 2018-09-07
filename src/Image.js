@@ -56,6 +56,7 @@ class Image {
 
   handleNewComment() {
     this.commentForm.addEventListener('submit', (e) => {
+      e.preventDefault()
       // const newComment = document.createElement('li')
       // newComment.innerText = this.commentInput.value
       // this.commentForm.appendChild(newComment)
@@ -71,6 +72,7 @@ class Image {
         })
       }).then(res => res.json()).
       then(json => console.log(json))
+      location.reload()
     })
   }
 }
