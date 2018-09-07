@@ -21,7 +21,7 @@ class Image {
     this.showLikes.innerText = this.likeCount
     this.comments.forEach(comment => {
     const newLi = document.createElement('li')
-    newLi.innerHTML = `<p>${comment.content}<button>x</button>`
+    newLi.innerHTML = `${comment.content}<button>x</button>`
     this.showComments.appendChild(newLi)
     newLi.lastElementChild.addEventListener('click', ()=> {
       newLi.remove()
